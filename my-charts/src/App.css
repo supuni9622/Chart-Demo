@@ -1,0 +1,19 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1em;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.side{
+overflow-y: scroll;
+height: 100vh;
+}
+
+.main{
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 20px;
+}
