@@ -9,10 +9,10 @@ const Home = () => {
         >
         <div className='w-100 home-wrapper pt-4 pr-3'>
             <div className='box box1'>
-                Loading Component
+                Heat Map
             </div>
             <div className='box box2'>
-                Multy Step Form
+                Line Chart
             </div>
             <div className='box box3'>
                  Icons
