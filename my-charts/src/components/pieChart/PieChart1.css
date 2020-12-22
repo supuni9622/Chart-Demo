@@ -1,0 +1,10 @@
+.pie-chart-widget .pie-labels{
+    font-size: 9px;
+}
+.pie-chart-widget .pie-chart-icon{
+    color: #BDBDBD;
+}
+.pie-chart-widget .selected-label{
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+}
