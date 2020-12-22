@@ -3,6 +3,7 @@ import {Card} from 'react-bootstrap';
 import moment from 'moment';
 import SimpleLineChart1 from './SimpleLineChart1';
 import SimpleLineChart2 from './SimpleLineChart2';
+import LineChartWithMissingDates from './LineChartWithMissingDates';
 
 const data2 = [
     {
@@ -146,7 +147,10 @@ const Index = () => {
             <Card className='mb-5 py-3'>
                 <h6 className='ml-2 px-2 mb-3'>Map with mock data without filling empty cells</h6>
                 <div className="p-2">
-                    
+                  <LineChartWithMissingDates
+                    data={data2}
+                    lineOptions={lineChartLineOptions}
+                  />
                 </div>
             </Card>
             <Card className='mb-5 py-3'>
