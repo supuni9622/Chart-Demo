@@ -90,7 +90,7 @@ const data2 = [
 
 const removeLineKeyDuplication = (data, key) => {
     return [
-       ... new Map(
+       ...new Map(
           data.map(x => [key(x), x])
        ).values()
     ]

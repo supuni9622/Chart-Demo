@@ -39,6 +39,8 @@ const LineChartWithMissingDates = ({data, lineOptions =  [] }) => {
         }
         return result;
         },dateSeriesLineChart);
+
+        console.log('Test 1', transformedLineData);
         
         const transformedLineChartData = data.reduce((result,{rewardId,date, count})=>{
         if(result[date] && !result[rewardId]){
@@ -54,7 +56,42 @@ const LineChartWithMissingDates = ({data, lineOptions =  [] }) => {
 
         },transformedLineData);
 
+        console.log('Test 1', transformedLineChartData);
+
         const transformedArray = Object.values(transformedLineChartData);
+
+        //===========================================================================
+
+        const test1 = dateSeries.reduce((result, data) => {
+          result.push({ name: '', count: [] });
+          return result;
+      }, []);
+
+      console.log('Testing', test1);
+  
+      const test2 = data.reduce((result,{rewardId,date, count }) => {
+          result[rewardId] = { date: moment(date).format("MMM-DD"), name: rewardId, count: count }
+          return result;
+      }, {});
+
+      console.log('Testing2', test2);
+  
+      // const transformed1 = pointSeries.redeemed.reduce((result, { redeemedDate, totalRedeemedPoints }) => {
+      //     if (result[redeemedDate]) {
+      //         result[redeemedDate].redeemed = totalRedeemedPoints;
+      //     } else {
+      //         result[redeemedDate] = {
+      //             date: moment(redeemedDate).format("MMM-DD"),
+      //             collected: 0,
+      //             redeemed: totalRedeemedPoints
+      //         };
+      //     }
+  
+      //     return result;
+  
+      // }, transformedCollected1);
+  
+      // const transformedPointsArray1 = Object.values(transformed1);
 
     return (
         <ResponsiveContainer
